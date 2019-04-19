@@ -1,28 +1,30 @@
 <div class="container">
-  <div class="row justify-content-md-center">
-    <div class="col">
-      <mat-card>
-          <mat-card-title>Shiba Inu</mat-card-title>
-
+  <div class="row align-items-center">
+    <div class="col-sm-1">
+      <mat-card class="marginCard">
+          <mat-card-title>Login HMDIOY</mat-card-title>
           <form class="example-form">
               <mat-form-field class="example-full-width">
                 <input matInput placeholder="Email" [formControl]="emailFormControl"
                        [errorStateMatcher]="matcher" >
-                <mat-hint>Errors appear instantly!</mat-hint>
+                <mat-hint>Entre com seu Email</mat-hint>
                 <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-                  Please enter a valid email address
+                  O E-mail parece invalido, entre com um E-mail correto!
                 </mat-error>
                 <mat-error *ngIf="emailFormControl.hasError('required')">
-                  Email is <strong>required</strong>
+                  o E-mail é <strong>necessário</strong>
                 </mat-error>
               </mat-form-field>
-
-              <!-- <mat-form-field class="example-full-width">
-                  <input matInput placeholder="Favorite food" value="Sushi">
-                </mat-form-field> -->
-
+              <div class="w-100"></div>
+              <br>
+              <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Senha" value="" type="password" >
+                  <mat-hint>Insira sua senha</mat-hint>
+                </mat-form-field>
+                <div class="w-100"></div>
+                <br>
+                <button mat-raised-button color="primary">Login</button>
             </form>
-            
       </mat-card>
     </div>
   </div>
