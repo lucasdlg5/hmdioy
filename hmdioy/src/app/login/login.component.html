@@ -6,7 +6,7 @@
           <form class="example-form">
               <mat-form-field class="example-full-width">
                 <input matInput placeholder="Email" [formControl]="emailFormControl"
-                       [errorStateMatcher]="matcher" >
+                       [errorStateMatcher]="matcher" name="email" autocomplete="email">
                 <mat-hint>Entre com seu Email</mat-hint>
                 <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
                   O E-mail parece invalido, entre com um E-mail correto!
@@ -18,7 +18,7 @@
               <div class="w-100"></div>
               <br>
               <mat-form-field class="example-full-width">
-                  <input matInput placeholder="Senha" value="" type="password" >
+                  <input matInput placeholder="Senha" value="" type="password" name="password_current" maxlength="250" id="password_current" required="required" autofocus="autofocus" autocomplete="current-password">
                   <mat-hint>Insira sua senha</mat-hint>
                 </mat-form-field>
                 <div class="w-100"></div>
