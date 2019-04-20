@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
+pessoas = [ 'Daniel Williams', 'Lucas Domingos', 'Matheus Domingos']
   constructor() { }
 
   ngOnInit() {

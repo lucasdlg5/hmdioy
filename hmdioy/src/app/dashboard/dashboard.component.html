@@ -1,3 +1,23 @@
-<p>
-  dashboard works!
-</p>
+<div class="container">
+  <div class="row align-items-center">
+    <div class="col-sm-1">
+      <mat-toolbar>
+        <mat-toolbar-row>
+          <span>How Much I Owe You?</span>
+          <span class="example-spacer"></span>
+          <!-- <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">favorite</mat-icon>
+          <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">delete</mat-icon> -->
+          <button mat-fab color="primary"><mat-icon>home</mat-icon></button>
+        </mat-toolbar-row>
+      </mat-toolbar>
+      <mat-card class="marginCard">
+          <mat-card-title>Selecione uma pessoa</mat-card-title>
+          <mat-chip-list>
+                <mat-chip *ngFor="let pessoa of pessoas" color="primary" selected>
+                  {{pessoa}}
+                </mat-chip>
+          </mat-chip-list>
+      </mat-card>
+    </div>
+  </div>
+</div>
