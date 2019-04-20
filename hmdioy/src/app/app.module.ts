@@ -14,13 +14,15 @@ import {MatChipsModule} from '@angular/material/chips';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { PersonComponent } from './person/person.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    PersonComponent
   ],
   imports: [
     BrowserModule,
