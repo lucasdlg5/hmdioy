@@ -1,0 +1,14 @@
+C:\Users\LUCASDOMINGOSLEAOGOM\Desktop\Projetos\hmdioy\API_HMDYOI\API_HMDYOI\bin\Debug\netcoreapp2.1\API_HMDYOI.deps.json
+C:\Users\LUCASDOMINGOSLEAOGOM\Desktop\Projetos\hmdioy\API_HMDYOI\API_HMDYOI\bin\Debug\netcoreapp2.1\API_HMDYOI.runtimeconfig.json
+C:\Users\LUCASDOMINGOSLEAOGOM\Desktop\Projetos\hmdioy\API_HMDYOI\API_HMDYOI\bin\Debug\netcoreapp2.1\API_HMDYOI.runtimeconfig.dev.json
+C:\Users\LUCASDOMINGOSLEAOGOM\Desktop\Projetos\hmdioy\API_HMDYOI\API_HMDYOI\bin\Debug\netcoreapp2.1\API_HMDYOI.dll
+C:\Users\LUCASDOMINGOSLEAOGOM\Desktop\Projetos\hmdioy\API_HMDYOI\API_HMDYOI\obj\Debug\netcoreapp2.1\API_HMDYOI.csprojAssemblyReference.cache
+C:\Users\LUCASDOMINGOSLEAOGOM\Desktop\Projetos\hmdioy\API_HMDYOI\API_HMDYOI\obj\Debug\netcoreapp2.1\API_HMDYOI.csproj.CoreCompileInputs.cache
+C:\Users\LUCASDOMINGOSLEAOGOM\Desktop\Projetos\hmdioy\API_HMDYOI\API_HMDYOI\obj\Debug\netcoreapp2.1\API_HMDYOI.RazorAssemblyInfo.cache
+C:\Users\LUCASDOMINGOSLEAOGOM\Desktop\Projetos\hmdioy\API_HMDYOI\API_HMDYOI\obj\Debug\netcoreapp2.1\API_HMDYOI.RazorAssemblyInfo.cs
+C:\Users\LUCASDOMINGOSLEAOGOM\Desktop\Projetos\hmdioy\API_HMDYOI\API_HMDYOI\obj\Debug\netcoreapp2.1\API_HMDYOI.AssemblyInfoInputs.cache
+C:\Users\LUCASDOMINGOSLEAOGOM\Desktop\Projetos\hmdioy\API_HMDYOI\API_HMDYOI\obj\Debug\netcoreapp2.1\API_HMDYOI.AssemblyInfo.cs
+C:\Users\LUCASDOMINGOSLEAOGOM\Desktop\Projetos\hmdioy\API_HMDYOI\API_HMDYOI\obj\Debug\netcoreapp2.1\API_HMDYOI.RazorTargetAssemblyInfo.cache
+C:\Users\LUCASDOMINGOSLEAOGOM\Desktop\Projetos\hmdioy\API_HMDYOI\API_HMDYOI\bin\Debug\netcoreapp2.1\API_HMDYOI.pdb
+C:\Users\LUCASDOMINGOSLEAOGOM\Desktop\Projetos\hmdioy\API_HMDYOI\API_HMDYOI\obj\Debug\netcoreapp2.1\API_HMDYOI.dll
+C:\Users\LUCASDOMINGOSLEAOGOM\Desktop\Projetos\hmdioy\API_HMDYOI\API_HMDYOI\obj\Debug\netcoreapp2.1\API_HMDYOI.pdb

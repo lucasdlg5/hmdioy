@@ -1,27 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
 
-export interface PeriodicElement {
-  name: string;
+export interface Transaction {
+  
   position: number;
-  weight: number;
-  symbol: string;
+  nome: string;
+  description: string;
+  data: string;
+  valor: number;
 }
-
-const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
-  {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
-  {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
-  {position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be'},
-  // {position: 5, name: 'Boron', weight: 10.811, symbol: 'B'},
-  // {position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C'},
-  // {position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N'},
-  // {position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O'},
-  // {position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F'},
-  // {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
-];
-
-
 
 @Component({
   selector: 'app-view-person-values',
@@ -30,13 +17,33 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class ViewPersonValuesComponent implements OnInit {
 
-  pessoas = [ 'Daniel Williams', 'Lucas Domingos', 'Matheus Domingos'];
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = ELEMENT_DATA;
+  // displayedColumns = ['position', 'nome', 'description', 'data', 'cost'];
+  // transactions: Transaction[] = [
+  //   {position: 1, nome: 'Lucas Domingos', description: 'Paguei o Star Geek para o Richard', data: '04/05/1997', valor: 15.00},
+  // ];
+
+  pessoas = ['Richard Kikawa'];
+  displayedColumns = ['position', 'nome', 'description', 'data', 'cost'];
+  transactions: Transaction[] = [
+    {position: 1, nome: 'Lucas Domingos Leão Gomes', description: 'Paguei o Star Geek para o Richard', data: '04/05/1997', valor: 15.00},
+    {position: 2, nome: 'Richard Kikawa', description: 'Lanche no Semar', data: '07/05/1997', valor: -6.99},
+    // {position: 3, nome: 'Richard Kikawa', description: 'Lanche no Semar', data: '07/05/1997', valor: 7},
+    // {position: 4, nome: 'Richard Kikawa', description: 'Lanche no Semar', data: '07/05/1997', valor: -6.99},
+    // {position: 5, nome: 'Richard Kikawa', description: 'Lanche no Semar', data: '07/05/1997', valor: 10},
+    // {position: 6, nome: 'Richard Kikawa', description: 'Lanche no Semar', data: '07/05/1997', valor: 8},
+    // {position: 7, nome: 'Richard Kikawa', description: 'Lanche no Semar', data: '07/05/1997', valor: -6.99},
+    // {position: 8, nome: 'Richard Kikawa', description: 'Lanche no Semar', data: '07/05/1997', valor: -6.99},
+    // {position: 9, nome: 'Richard Kikawa', description: 'Lanche no Semar', data: '07/05/1997', valor: 1},
+    // {position: 10, nome: 'Richard Kikawa', description: 'Lanche no Semar', data: '07/05/1997', valor: 3},
+  ];
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  getTotalCost() {
+    return this.transactions.map(t => t.valor).reduce((acc, value) => acc + value, 0);
   }
 
 }

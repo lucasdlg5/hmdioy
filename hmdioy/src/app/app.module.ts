@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -16,6 +16,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTableModule} from '@angular/material/table';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 import { ViewPersonValuesComponent } from './view-person-values/view-person-values.component';
 import { AddValueComponent } from './add-value/add-value.component';
@@ -43,7 +44,15 @@ import { AddValueComponent } from './add-value/add-value.component';
     MatToolbarModule,
     MatIconModule,
     MatTooltipModule,
-    MatTableModule
+    MatTableModule,
+    MatGridListModule,
+    RouterModule.forRoot([
+      { path: 'login', component: LoginComponent },
+      { path: 'dashboard', component: DashboardComponent },
+      { path: 'values', component: ViewPersonValuesComponent },
+      { path: 'add', component: AddValueComponent },
+      { path: '', redirectTo: '/login', pathMatch: 'full' }
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]

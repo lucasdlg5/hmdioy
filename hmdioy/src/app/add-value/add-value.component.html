@@ -1,11 +1,26 @@
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <input type="number">
-      </div>
-      <div class="col"><span>Descrição: {{ dataSource[0].descricao }}</span></div> <!-- Descricao do movimento -->
-      <div class="col"><span>Data: {{ dataSource[0].data_movimento }}</span></div> <!-- Span Data movimento -->
-      <button mat-raised-button color="primary" style="margin-left: 5%;">Adicionar</button> <!-- Botao de Add valor -->
+<mat-grid-list cols="1" rowHeight="100px">
+  <mat-grid-tile>
+      <mat-card-title>Adicionar valor para <br> Fernando Labirinto</mat-card-title>
+  </mat-grid-tile>
 
-    </div>
-  </div>
+    <mat-grid-tile cols="1">
+        <mat-form-field>
+            <input type='number' matInput placeholder="Valor" value="">
+        </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile >
+        <div>        
+          <mat-form-field>
+            <input matInput placeholder="Descrição" value="">
+        </mat-form-field>
+      </div> <!-- Descricao do movimento -->
+    </mat-grid-tile>
+    <mat-grid-tile >
+        <mat-form-field>
+          <input type="date" matInput placeholder="Data" value=""> <!-- Span Data movimento -->
+        </mat-form-field>
+    </mat-grid-tile>
+  <mat-grid-tile>
+    <button mat-raised-button color="primary" [routerLink]="['/values']">Adicionar</button>  
+  </mat-grid-tile><!-- Botao de Add valor -->
+</mat-grid-list>
