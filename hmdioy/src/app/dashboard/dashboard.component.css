@@ -6,3 +6,11 @@
     flex: 1 1 auto;
   }
 
+  table {
+    width: 50%;
+  }
+  
+  tr.mat-footer-row {
+    font-weight: bold;
+  }
+  

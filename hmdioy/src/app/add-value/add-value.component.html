@@ -1,3 +1,11 @@
-<p>
-  <input type="number">
-</p>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <input type="number">
+      </div>
+      <div class="col"><span>Descrição: {{ dataSource[0].descricao }}</span></div> <!-- Descricao do movimento -->
+      <div class="col"><span>Data: {{ dataSource[0].data_movimento }}</span></div> <!-- Span Data movimento -->
+      <button mat-raised-button color="primary" style="margin-left: 5%;">Adicionar</button> <!-- Botao de Add valor -->
+
+    </div>
+  </div>

@@ -25,6 +25,6 @@ export class LoginComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-  }  
+  }
 }
 
