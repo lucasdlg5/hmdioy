@@ -14,7 +14,11 @@ import {MatChipsModule} from '@angular/material/chips';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatTableModule} from '@angular/material/table';
+
 import { ViewPersonValuesComponent } from './view-person-values/view-person-values.component';
+import { AddValueComponent } from './add-value/add-value.component';
+
 
 
 @NgModule({
@@ -23,6 +27,7 @@ import { ViewPersonValuesComponent } from './view-person-values/view-person-valu
     LoginComponent,
     DashboardComponent,
     ViewPersonValuesComponent,
+    AddValueComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,7 +41,8 @@ import { ViewPersonValuesComponent } from './view-person-values/view-person-valu
     MatChipsModule,
     MatToolbarModule,
     MatIconModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
