@@ -14,5 +14,16 @@ namespace hmdyoi.Model
         public string HistDescricao { get; set; }
         public int? HistUsuIdDevedor { get; set; }
         public DateTime HistData { get; set; }
+
+        public void teste()
+        {
+
+            //https://www.entityframeworktutorial.net/efcore/entity-framework-core-console-application.aspx
+            hmdioyContext tess;
+            tess.HistoricoCobranca.Add();
+
+        }
     }
+
+
 }

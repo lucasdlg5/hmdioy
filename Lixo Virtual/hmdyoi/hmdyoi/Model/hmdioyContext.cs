@@ -15,8 +15,13 @@
 
 //Vá em: Tools -> NuGet Package Manger -> Package Manger Console
 //Insira no console (para o MySQL foi pego aqui: https://dev.mysql.com/doc/connector-net/en/connector-net-entityframework-core-scaffold-example.html)
-//Scaffold-DbContext "server=SEUSERVIDOR;port=3306;user=SEUUSUARIO;password=SUASENHA;database=NOMEBANCODEDADOS" MySql.Data.EntityFrameworkCore -OutputDir NOMEDAPASTAQUEIRACRIARASCLASSES -f
+//Scaffold-DbContext "server=SEU_SERVIDOR;port=3306;user=SEU_USUARIO;password=SUA_SENHA;database=NOME_BANCO_DE_DADOS" MySql.Data.EntityFrameworkCore -OutputDir NOME_DA_PASTA_QUE_IRA_CRIAR_AS_CLASSES -f
 
+
+//Migrations sao a atualizacao de classes para o banco de dados
+//usando o NuGet Console: add-migration NOME_MIGRATION
+//Depois de gerado a migration, aplique no banco de dados
+// update-database –verbose
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
