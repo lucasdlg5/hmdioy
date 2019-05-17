@@ -4,7 +4,7 @@
       <h1><p>Adicionar</p></h1>
       <div class="input-group mb-3">
         <input type="text" class="form-control" placeholder="Nome" aria-label="Username" aria-describedby="basic-addon1" v-model="name">
-        <input type="text" class="form-control" placeholder="R$" aria-label="Price" aria-describedby="basic-addon1" v-model="price">
+        <input type="number" class="form-control" placeholder="R$" aria-label="Price" aria-describedby="basic-addon1" v-model="price">
       </div>  
       <div class="input-group mb-3">
         <input type="text" class="form-control" placeholder="Descrição" aria-label="Recipient's username" aria-describedby="button-addon2" v-model="desc"> 
@@ -39,7 +39,7 @@
             <tr v-for="teste in testes" :key="teste.id">
               <th>{{ teste.id}}</th>
               <th>{{ teste.name}}</th>
-              <th>{{ teste.price}}</th>
+              <th>R${{ teste.price}}</th>
               <th> {{ teste.desc}}</th>
               <th>{{ teste.data}}</th>
               <th><button type="button" class="btn btn-outline-info" >Info</button></th>
@@ -61,8 +61,9 @@ export default {
     data() {
     
      return {
-       counter: 0,
-       name: "",
+      a: 0,
+      counter: 0,
+      name: "",
        price: null,
        desc: "",
        testes:[]
@@ -94,6 +95,7 @@ export default {
       }
     },
     mounted(){
+      
     
     }
    
