@@ -1,23 +1,23 @@
 <template>
   <div id="app">
-    <div class="add-conta">
+    <div class="add-conta" id="add-conta">
       <h1><p>Adicionar</p></h1>
       <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Nome" aria-label="Username" aria-describedby="basic-addon1">
-        <input type="text" class="form-control" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1">
+        <input type="text" class="form-control" placeholder="Nome" aria-label="Username" aria-describedby="basic-addon1" v-model="name">
+        <input type="text" class="form-control" placeholder="R$" aria-label="Price" aria-describedby="basic-addon1" v-model="price">
       </div>  
       <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="algum preco" aria-label="Recipient's username" aria-describedby="button-addon2">
+        <input type="text" class="form-control" placeholder="Descrição" aria-label="Recipient's username" aria-describedby="button-addon2" v-model="desc"> 
       </div>
       <div class="d-flex justify-content-center">
-        <button type="button" class="btn btn-success btn-lg">Adicionar</button>
+        <button type="button" class="btn btn-success btn-lg" v-on:click="noneElemento">Adicionar</button>
       </div>
       
     </div>
     <div class="container-fluid mt-1 bg-dark p-3">
       <div class="row d-flex justify-content-end">
         <div class="col-2">
-           <button type="button" class="btn btn-primary btn-lg btn-block">+</button>
+           <button type="button" class="btn btn-primary btn-lg btn-block" v-on:click="blockElemento">+</button>
         </div>
       </div>
     </div>
@@ -30,6 +30,7 @@
             <th>ID</th>
             <th>Nome</th>
             <th>Valor</th>
+            <th>Descricao</th>
             <th>Data</th>
             <th>Status</th>
           </tr>
@@ -39,8 +40,9 @@
               <th>{{ teste.id}}</th>
               <th>{{ teste.name}}</th>
               <th>{{ teste.price}}</th>
-              <th>{{ teste.date}}</th>
-              <th><button type="button" class="btn btn-outline-info">Info</button></th>
+              <th> {{ teste.desc}}</th>
+              <th>{{ teste.data}}</th>
+              <th><button type="button" class="btn btn-outline-info" >Info</button></th>
             </tr>
             </tbody>
             <tfoot>
@@ -57,27 +59,42 @@
 <script>
 export default {
     data() {
+    
      return {
-        testes:[{"id":1,"name":"Kevinho","price":269,"date":"01/05/2018 00:09"},
-                {"id":2,"name":"Gusta","price":269,"date":"01/05/2018 00:09"},
-                {"id":3,"name":"Lusca","price":269,"date":"01/05/2018 00:09"},
-                {"id":4,"name":"Gutinho","price":269,"date":"01/05/2018 00:09"},
-                {"id":5,"name":"jonta","price":269,"date":"01/05/2018 00:09"}]
+       couter: 0,
+       name: "",
+       price: null,
+       desc: "",
+       testes:[]
      }
     },
   
     methods:{
-      getDevedores(){
-        fetch('teste.json').then(resp => resp.json()).then(data => this.json = data)
-      },
-
       blockElemento(){
-        document.getElementsByClassName('add-conta').style.display = 'block'
+  
+        document.getElementById('add-conta').style.display = 'block'
 
+
+      },
+      noneElemento(){
+        this.incrment()
+        
+        this.testes.push({
+          'id': this.couter,
+          'name': this.name,
+          'price': this.price,
+          'desc': this.desc,
+          'data': new Date().getDate() + '/' + new Date().getMonth() + '/' + new Date().getFullYear()
+        })
+         document.getElementById('add-conta').style.display = 'none'
+         
+      },
+      incrment(){
+        this.counter++;
       }
     },
     mounted(){
-      this.getDevedores()
+    
     }
    
     
@@ -86,14 +103,15 @@ export default {
 
 <style>
 .add-conta{
+  display: none;
   margin-top: 200px;
   margin-left: 25%;
   position: absolute;
   height: 50%;
   width: 40%;
   color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
+  background-color: rgba(90, 88, 88, 0.7);
+  border-radius: 5px;
   
   
 }
