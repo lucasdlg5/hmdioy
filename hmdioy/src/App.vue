@@ -61,7 +61,7 @@ export default {
     data() {
     
      return {
-       couter: 0,
+       counter: 0,
        name: "",
        price: null,
        desc: "",
@@ -80,7 +80,7 @@ export default {
         this.incrment()
         
         this.testes.push({
-          'id': this.couter,
+          'id': this.counter,
           'name': this.name,
           'price': this.price,
           'desc': this.desc,
