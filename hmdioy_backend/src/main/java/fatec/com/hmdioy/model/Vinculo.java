@@ -1,21 +1,30 @@
 package fatec.com.hmdioy.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 public class Vinculo {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	public int vin_id ;
+	
+	@Column(name = "vin_usu_id_origem")
+	@ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@JoinColumn(name="usu_id")
 	public int vin_usu_id_origem ;
 	
 	@Column(name = "vin_usu_id_destino")
+	@ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@JoinColumn(name="usu_id")
     public int vin_usu_id_destino ;
 	
-	@Column(name = "vin_id")
-    public int vin_id ;
 	
 	@Column(name = "vin_aceito")
     public Boolean vin_aceito ;
