@@ -1,10 +1,14 @@
 package fatec.com.hmdioy.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -14,6 +18,10 @@ public class Usuario {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public Integer usu_id;
+	
+	//@OneToMany(mappedBy = "vin_usu_id_destino",  targetEntity = Vinculo.class)
+	public List<Vinculo> vinculo = new ArrayList<Vinculo>();
+	
 	
 	@Column(name="usu_nome")
 	public String usu_nome;
