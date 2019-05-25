@@ -5,60 +5,54 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+
 @Entity
-@Table(name = "Usuario")
-public class Usuario {
+@Table(name = "usu_usuario")
+public class Usuario {	
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	public Integer usu_id;
+	public Long usu_id;
 	
-	//@OneToMany(mappedBy = "vin_usu_id_destino",  targetEntity = Vinculo.class)
-	public List<Vinculo> vinculo = new ArrayList<Vinculo>();
-	
-	
-	@Column(name="usu_nome")
+	@Column(name="usu_nome", length = 150, nullable= false)
 	public String usu_nome;
 	
-	@Column(name="usu_email")
+	@Column(name="usu_email", length = 150, nullable= false, unique = true)
 	public String usu_email;
 	
-	@Column(name="usu_username")
+	@Column(name="usu_username", length = 20, nullable= false, unique = true)
 	public String usu_username;
 	
-	@Column(name="usu_whatsapp")
+	@Column(name="usu_whatsapp", length = 17, nullable= false)
 	public String usu_whatsapp;
 	
 	@Column(name="usu_foto", columnDefinition="longblob")
 	//@Lob(type = LobType.BLOB)
 	public byte[] usu_foto;
 	
-	public Usuario(String usu_nome, String usu_email, String usu_username, String usu_whatsapp, byte[] usu_foto) {
-		this.usu_nome = usu_nome;
-		this.usu_email = usu_email;
-		this.usu_username = usu_username;
-		this.usu_whatsapp = usu_whatsapp;
-		this.usu_foto = usu_foto;
-	}
+	@ManyToMany(fetch = FetchType.LAZY)
+	@JoinTable(name = "uvi_usuario_vinculo",
+	joinColumns = {@JoinColumn(name = "usu_id")},
+	inverseJoinColumns = {@JoinColumn(name = "vin_id" ) })
 	
-	public Usuario(String usu_nome, String usu_email, String usu_username, String usu_whatsapp) {
-		this.usu_nome = usu_nome;
-		this.usu_email = usu_email;
-		this.usu_username = usu_username;
-		this.usu_whatsapp = usu_whatsapp;
-	}
+	private List<Vinculo> vinculo;
+	
+	//public List<Vinculo> vinculo = new ArrayList<Vinculo>();
 
-	public Integer getUsu_id() {
+	public Long getUsu_id() {
 		return usu_id;
 	}
 
-	public void setUsu_id(Integer usu_id) {
+	public void setUsu_id(Long usu_id) {
 		this.usu_id = usu_id;
 	}
 
