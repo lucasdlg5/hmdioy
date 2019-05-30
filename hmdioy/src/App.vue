@@ -14,16 +14,16 @@
       </div>
       
     </div>
-    <div class="container-fluid mt-1 bg-dark p-3">
+    <div class="container-fluid mt-1 bg-dark p-3 row">
+      <h1 class="mt-3 d-flex justify-content-center col-sm-8">Server</h1>
       <div class="row d-flex justify-content-end">
         <div class="col-2">
-           <button type="button" class="btn btn-primary btn-lg btn-block" v-on:click="blockElemento">+</button>
+           <button type="button" class="btn btn-primary btn-lg btn-block col-sm-4" v-on:click="blockElemento">+</button>
         </div>
       </div>
     </div>
 
     <div class="container">
-      <h1  class="mt-3 d-flex justify-content-center">Suas Contas</h1>
       <table class="mt-5 table">
         <thead>
           <tr>
@@ -90,6 +90,9 @@ export default {
          document.getElementById('add-conta').style.display = 'none'
          
       },
+      deletar(){
+        
+      },
       incrment(){
         this.counter++;
       }
@@ -104,6 +107,10 @@ export default {
 </script>
 
 <style>
+*{
+  font-family: 'Open Sans', sans-serif;
+  
+}
 .add-conta{
   display: none;
   margin-top: 200px;
@@ -132,4 +139,6 @@ export default {
 .btn .btn-primary .btn-lg{
   background-color: #fff;
 }
+
+
 </style>
