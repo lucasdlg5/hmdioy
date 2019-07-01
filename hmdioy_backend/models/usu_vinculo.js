@@ -8,8 +8,9 @@ module.exports = (sequelize, DataTypes) => {
     vin_alerta: DataTypes.BOOLEAN
   }, {});
   usu_vinculo.associate = function(models) {
-    usu_vinculo.hasOne(models.usuario, {as: 'vin_usu_origem', foreignKey: 'usu_id'})
-    usu_vinculo.hasOne(models.usuario, {as: 'vin_usu_destino', foreignKey: 'usu_id'})
+    usu_vinculo.belongsTo(models.usuario, {as: 'vin_usu_origem', foreignKey: 'usu_id'})
+    usu_vinculo.belongsTo(models.usuario, {as: 'vin_usu_destino', foreignKey: 'usu_id'})
+    usu_vinculo.hasMany(models.historico_cobranca)
   };
   usu_vinculo.removeAttribute('id');
   return usu_vinculo;

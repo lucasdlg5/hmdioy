@@ -1,7 +1,7 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const historico_cobranca = sequelize.define('historico_cobranca', {
-    hist_id: DataTypes.INTEGER,
+    hist_id: {type: DataTypes.INTEGER, autoIncrement: true, unique: true, primaryKey: true, comment: "Campo de ID da tabela" },
     hist_usu_vin_id: DataTypes.INTEGER,
     hist_valor_entrada: DataTypes.INTEGER,
     hist_usu_id_acao: DataTypes.INTEGER,
@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     hist_data: DataTypes.DATE
   }, {});
   historico_cobranca.associate = function(models) {
-    // associations can be defined here
+    historico_cobranca.belongsTo(models.usu_vinculo, {as: 'hist_usu_vin_id', foreignKey: 'vin_id'})
   };
   historico_cobranca.removeAttribute('id');
   return historico_cobranca;
