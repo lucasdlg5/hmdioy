@@ -11,5 +11,6 @@ module.exports = (sequelize, DataTypes) => {
   usuario.associate = function(models) {
     usuario.belongsTo(models.usu_vinculo);
   };
+  usuario.removeAttribute('id');
   return usuario;
 };

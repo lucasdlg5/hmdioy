@@ -14,5 +14,6 @@ module.exports = (sequelize, DataTypes) => {
   historico_cobranca.associate = function(models) {
     // associations can be defined here
   };
+  historico_cobranca.removeAttribute('id');
   return historico_cobranca;
 };

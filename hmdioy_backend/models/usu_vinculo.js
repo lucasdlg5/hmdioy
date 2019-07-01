@@ -11,5 +11,6 @@ module.exports = (sequelize, DataTypes) => {
     usu_vinculo.hasOne(models.usuario, {as: 'vin_usu_origem', foreignKey: 'usu_id'})
     usu_vinculo.hasOne(models.usuario, {as: 'vin_usu_destino', foreignKey: 'usu_id'})
   };
+  usu_vinculo.removeAttribute('id');
   return usu_vinculo;
 };
