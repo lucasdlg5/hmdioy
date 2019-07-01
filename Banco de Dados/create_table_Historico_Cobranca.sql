@@ -1,3 +1,5 @@
+-- sequelize model:create --name historico_cobranca --attributes hist_id:integer,hist_usu_vin_id:integer,hist_valor_entrada:integer,hist_usu_id_acao:integer,hist_valor_atual:integer,hist_valor_final:integer,hist_descricao:string,hist_usu_id_devedor:integer,hist_data:date
+
 CREATE TABLE HISTORICO_COBRANCA (
     HIST_ID INT AUTO_INCREMENT NOT NULL,
     HIST_USU_VIN_ID INT NOT NULL,

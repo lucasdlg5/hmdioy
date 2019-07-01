@@ -1,3 +1,5 @@
+-- sequelize model:create --name usuario --attributes usu_id:integer,usu_nome:string,usu_email:string,usu_username:string,usu_whatsapp:string,usu_foto:blob
+
 CREATE TABLE usuario (
     USU_ID INT AUTO_INCREMENT NOT NULL,
     USU_NOME VARCHAR (150) NOT NULL,

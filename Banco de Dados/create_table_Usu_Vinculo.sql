@@ -1,3 +1,5 @@
+-- sequelize model:create --name usu_vinculo --attributes vin_id:integer,vin_usu_origem:integer,vin_usu_destino:integer,vin_aceito:boolean,vin_alerta:boolean
+
 CREATE TABLE USU_VINCULO (
     VIN_ID INT AUTO_INCREMENT NOT NULL,
     VIN_USU_ORIGEM INT NOT NULL,
