@@ -1,0 +1,11 @@
+{
+  "name": "hmdioy_backend",
+  "version": "1.0.0",
+  "description": "Backend para o projeto",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lucas Domingos Leao Gomes",
+  "license": "ISC"
+}
