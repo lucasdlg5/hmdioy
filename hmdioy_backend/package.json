@@ -7,5 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Lucas Domingos Leao Gomes",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "mysql": "^2.17.1",
+    "mysql2": "^1.6.5"
+  }
 }
