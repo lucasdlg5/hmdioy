@@ -14,6 +14,22 @@ CREATE TABLE usuario (
 
 
 #INSERTS
+insert into usuarios (
+    `USU_NOME`,
+    `USU_EMAIL`,
+    `USU_USERNAME`,
+    `USU_WHATSAPP`,
+	 `createdAt`,
+	 `updatedAt`) 
+VALUES (
+    "Lucas Domingos Leão Gomes",
+    "lucasdomingosleao55@hotmail.com",
+    "lucasdlg",
+    "+55(12)99638-1184",
+    NOW(),
+    NOW()
+    
+);
 
 insert into usuario (
     `USU_NOME`,
@@ -26,6 +42,7 @@ VALUES (
     "lucasdlg",
     "+55(12)99638-1184"
 );
+
 
 insert into usuario (
     `USU_NOME`,

@@ -13,18 +13,34 @@ CREATE TABLE USU_VINCULO (
 
 #INSERTS
 
+INSERT INTO USU_VINCULOS (
+    `VIN_USU_ORIGEM`,
+    `VIN_USU_DESTINO`,
+    `VIN_ACEITO`,
+    `VIN_ALERTA`,
+	`createdAt`,
+	`updatedAt`) 
+VALUES(
+    1,
+    2,
+    0,
+    1,
+    NOW(),
+    NOW()
+);
+
 #USUARIO LUCAS PARA USUARIO GABRIEL COMO STATUS PENDENTE DE ACEITAR O CONVITE
 INSERT INTO USU_VINCULO (
     `VIN_USU_ORIGEM`,
     `VIN_USU_DESTINO`,
     `VIN_ACEITO`,
     `VIN_ALERTA`) 
-    VALUES(
-        1,
-        2,
-        0,
-        1
-    );
+VALUES(
+    1,
+    2,
+    0,
+    1
+);
 
 #USUARIO LUCAS PARA USUARIO JONATHAN COMO STATUS CONVITE ACEITO
 INSERT INTO USU_VINCULO (
@@ -32,12 +48,12 @@ INSERT INTO USU_VINCULO (
     `VIN_USU_DESTINO`,
     `VIN_ACEITO`,
     `VIN_ALERTA`) 
-    VALUES(
-        1,
-        3,
-        1,
-        0
-    );
+VALUES(
+    1,
+    3,
+    1,
+    0
+);
 
 #USUARIO GABRIEL PARA USUARIO JONATHAN COMO STATUS RECUSADO
 INSERT INTO USU_VINCULO (
@@ -45,9 +61,9 @@ INSERT INTO USU_VINCULO (
     `VIN_USU_DESTINO`,
     `VIN_ACEITO`,
     `VIN_ALERTA`) 
-    VALUES(
-        2,
-        3,
-        0,
-        0
-    );
+VALUES(
+    2,
+    3,
+    0,
+    0
+);

@@ -2,13 +2,10 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.createTable('usu_vinculos', {
-      id: {
+      vin_id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
-      },
-      vin_id: {
         type: Sequelize.INTEGER
       },
       vin_usu_origem: {

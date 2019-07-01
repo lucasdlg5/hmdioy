@@ -2,13 +2,10 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.createTable('historico_cobrancas', {
-      id: {
+      hist_id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
-      },
-      hist_id: {
         type: Sequelize.INTEGER
       },
       hist_usu_vin_id: {
