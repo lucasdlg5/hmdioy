@@ -9,16 +9,28 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       vin_usu_origem: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'usuarios', // name of Target model
+          key: 'usu_id', // key in Target model that we're referencing
+        },
+        allowNull: false,
       },
       vin_usu_destino: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'usuarios', // name of Target model
+          key: 'usu_id', // key in Target model that we're referencing
+        },
+        allowNull: false,
       },
       vin_aceito: {
-        type: Sequelize.BOOLEAN
+        type: Sequelize.BOOLEAN,
+        allowNull: false,
       },
       vin_alerta: {
-        type: Sequelize.BOOLEAN
+        type: Sequelize.BOOLEAN,
+        allowNull: false,
       },
       // createdAt: {
       //   allowNull: false,

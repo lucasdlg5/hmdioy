@@ -7,21 +7,27 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       usu_nome: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(150),
+        allowNull: false,
       },
       usu_email: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(100),
         unique: true,
+        isEmail: true,
+        allowNull: false,
       },
       usu_username: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(20),
         unique: true,
+        allowNull: false,
       },
       usu_whatsapp: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false,
+        unique: true,
       },
       usu_foto: {
         type: Sequelize.BLOB
