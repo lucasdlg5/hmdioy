@@ -13,17 +13,27 @@ module.exports = {
         type: Sequelize.STRING
       },
       usu_email: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        unique: true,
       },
       usu_username: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        unique: true,
       },
       usu_whatsapp: {
         type: Sequelize.STRING
       },
       usu_foto: {
         type: Sequelize.BLOB
-      }
+      },
+      // createdAt: {
+      //   allowNull: false,
+      //   type: Sequelize.DATE(6)
+      // },
+      // updatedAt: {
+      //   allowNull: false,
+      //   type: Sequelize.DATE(6)
+      // }
     });
 
 

@@ -1,5 +1,6 @@
 'use strict';
-
+// sequelize db:migrate
+// sequelize db:seed:all
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert('usuarios', [{
@@ -8,6 +9,9 @@ module.exports = {
       usu_username: 'lucasdlg',
       usu_whatsapp: '+55(12)99638-1184',
       usu_foto: null,
+      // createdAt: Date.now(),
+      // updatedAt: Date.now()
+
     }], {});
   },
 

@@ -30,6 +30,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       hist_data: {
+        allowNull: false,
         type: Sequelize.DATE
       }
     });

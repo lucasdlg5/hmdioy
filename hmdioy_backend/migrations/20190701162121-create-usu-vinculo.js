@@ -19,7 +19,15 @@ module.exports = {
       },
       vin_alerta: {
         type: Sequelize.BOOLEAN
-      }
+      },
+      // createdAt: {
+      //   allowNull: false,
+      //   type: Sequelize.DATE(6)
+      // },
+      // updatedAt: {
+      //   allowNull: false,
+      //   type: Sequelize.DATE(6)
+      // }
     });
   },
   down: (queryInterface, Sequelize) => {
