@@ -1,6 +1,6 @@
--- sequelize model:create --name usu_vinculo --attributes vin_id:integer,vin_usu_origem:integer,vin_usu_destino:integer,vin_aceito:boolean,vin_alerta:boolean
+-- sequelize model:create --name USU_VINCULOS --attributes vin_id:integer,vin_usu_origem:integer,vin_usu_destino:integer,vin_aceito:boolean,vin_alerta:boolean
 
-CREATE TABLE USU_VINCULO (
+CREATE TABLE USU_VINCULOS (
     VIN_ID INT AUTO_INCREMENT NOT NULL,
     VIN_USU_ORIGEM INT NOT NULL,
     VIN_USU_DESTINO INT NOT NULL,
@@ -30,7 +30,7 @@ VALUES(
 );
 
 #USUARIO LUCAS PARA USUARIO GABRIEL COMO STATUS PENDENTE DE ACEITAR O CONVITE
-INSERT INTO USU_VINCULO (
+INSERT INTO USU_VINCULOS (
     `VIN_USU_ORIGEM`,
     `VIN_USU_DESTINO`,
     `VIN_ACEITO`,
@@ -43,7 +43,7 @@ VALUES(
 );
 
 #USUARIO LUCAS PARA USUARIO JONATHAN COMO STATUS CONVITE ACEITO
-INSERT INTO USU_VINCULO (
+INSERT INTO USU_VINCULOS (
     `VIN_USU_ORIGEM`,
     `VIN_USU_DESTINO`,
     `VIN_ACEITO`,
@@ -56,7 +56,7 @@ VALUES(
 );
 
 #USUARIO GABRIEL PARA USUARIO JONATHAN COMO STATUS RECUSADO
-INSERT INTO USU_VINCULO (
+INSERT INTO USU_VINCULOS (
     `VIN_USU_ORIGEM`,
     `VIN_USU_DESTINO`,
     `VIN_ACEITO`,

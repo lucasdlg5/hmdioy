@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
     vin_usu_destino: DataTypes.INTEGER,
     vin_aceito: DataTypes.BOOLEAN,
     vin_alerta: DataTypes.BOOLEAN
-  }, {});
+  }, {timestamps: false});
   usu_vinculo.associate = function(models) {
     usu_vinculo.belongsTo(models.usuario, {as: 'vin_usu_origem', foreignKey: 'usu_id'})
     usu_vinculo.belongsTo(models.usuario, {as: 'vin_usu_destino', foreignKey: 'usu_id'})

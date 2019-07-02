@@ -23,16 +23,10 @@ module.exports = {
       },
       usu_foto: {
         type: Sequelize.BLOB
-      },
-      createdAt: {
-        allowNull: false,
-        type: Sequelize.DATE
-      },
-      updatedAt: {
-        allowNull: false,
-        type: Sequelize.DATE
       }
     });
+
+
   },
   down: (queryInterface, Sequelize) => {
     return queryInterface.dropTable('usuarios');

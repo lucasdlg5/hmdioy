@@ -7,9 +7,9 @@ module.exports = (sequelize, DataTypes) => {
     usu_username: DataTypes.STRING(30),
     usu_whatsapp: DataTypes.STRING(17),
     usu_foto: DataTypes.BLOB('long') 
-  }, {});
+  }, {timestamps: false});
   usuario.associate = function(models) {
-    usuario.belongsTo(models.usu_vinculo);
+    usuario.hasMany(models.usu_vinculo);
   };
   usuario.removeAttribute('id');
   return usuario;

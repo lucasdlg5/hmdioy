@@ -1,6 +1,6 @@
--- sequelize model:create --name usuario --attributes usu_id:integer,usu_nome:string,usu_email:string,usu_username:string,usu_whatsapp:string,usu_foto:blob
+-- sequelize model:create --name usuarios --attributes usu_id:integer,usu_nome:string,usu_email:string,usu_username:string,usu_whatsapp:string,usu_foto:blob
 
-CREATE TABLE usuario (
+CREATE TABLE usuarios (
     USU_ID INT AUTO_INCREMENT NOT NULL,
     USU_NOME VARCHAR (150) NOT NULL,
     USU_EMAIL VARCHAR (150) NOT NULL UNIQUE,
@@ -31,7 +31,7 @@ VALUES (
     
 );
 
-insert into usuario (
+insert into usuarios (
     `USU_NOME`,
     `USU_EMAIL`,
     `USU_USERNAME`,
@@ -44,7 +44,7 @@ VALUES (
 );
 
 
-insert into usuario (
+insert into usuarios (
     `USU_NOME`,
     `USU_EMAIL`,
     `USU_USERNAME`,
@@ -56,7 +56,7 @@ VALUES (
     "+99(99)99999-9999"
 );
 
-insert into usuario (
+insert into usuarios (
     `USU_NOME`,
     `USU_EMAIL`,
     `USU_USERNAME`,

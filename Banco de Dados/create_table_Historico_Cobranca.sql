@@ -1,6 +1,6 @@
--- sequelize model:create --name historico_cobranca --attributes hist_id:integer,hist_usu_vin_id:integer,hist_valor_entrada:integer,hist_usu_id_acao:integer,hist_valor_atual:integer,hist_valor_final:integer,hist_descricao:string,hist_usu_id_devedor:integer,hist_data:date
+-- sequelize model:create --name HISTORICO_COBRANCAS --attributes hist_id:integer,hist_usu_vin_id:integer,hist_valor_entrada:integer,hist_usu_id_acao:integer,hist_valor_atual:integer,hist_valor_final:integer,hist_descricao:string,hist_usu_id_devedor:integer,hist_data:date
 
-CREATE TABLE HISTORICO_COBRANCA (
+CREATE TABLE HISTORICO_COBRANCAS (
     HIST_ID INT AUTO_INCREMENT NOT NULL,
     HIST_USU_VIN_ID INT NOT NULL,
     HIST_VALOR_ENTRADA INT (9) NOT NULL,
@@ -19,7 +19,7 @@ CREATE TABLE HISTORICO_COBRANCA (
 
 #inserts
 
-INSERT INTO HISTORICO_COBRANCAS(
+INSERT INTO HISTORICO_COBRANCASS(
     `HIST_USU_VIN_ID`,
     `HIST_VALOR_ENTRADA`,
     `HIST_USU_ID_ACAO`,
@@ -43,7 +43,7 @@ INSERT INTO HISTORICO_COBRANCAS(
     NOW()
 );
 
-INSERT INTO HISTORICO_COBRANCA(
+INSERT INTO HISTORICO_COBRANCAS(
     `HIST_USU_VIN_ID`,
     `HIST_VALOR_ENTRADA`,
     `HIST_USU_ID_ACAO`,
@@ -63,7 +63,7 @@ INSERT INTO HISTORICO_COBRANCA(
     now() #DATA DA ADICAO
 );
 
-INSERT INTO HISTORICO_COBRANCA(
+INSERT INTO HISTORICO_COBRANCAS(
     `HIST_USU_VIN_ID`,
     `HIST_VALOR_ENTRADA`,
     `HIST_USU_ID_ACAO`,
@@ -83,7 +83,7 @@ INSERT INTO HISTORICO_COBRANCA(
     now() #DATA DA ADICAO
 );
 
-INSERT INTO HISTORICO_COBRANCA(
+INSERT INTO HISTORICO_COBRANCAS(
     `HIST_USU_VIN_ID`,
     `HIST_VALOR_ENTRADA`,
     `HIST_USU_ID_ACAO`,
@@ -103,7 +103,7 @@ INSERT INTO HISTORICO_COBRANCA(
     now() #DATA DA ADICAO
 );
 
-INSERT INTO HISTORICO_COBRANCA(
+INSERT INTO HISTORICO_COBRANCAS(
     `HIST_USU_VIN_ID`,
     `HIST_VALOR_ENTRADA`,
     `HIST_USU_ID_ACAO`,

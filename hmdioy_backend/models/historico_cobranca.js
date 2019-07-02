@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
     hist_descricao: DataTypes.STRING,
     hist_usu_id_devedor: DataTypes.INTEGER,
     hist_data: DataTypes.DATE
-  }, {});
+  }, {timestamps: false});
   historico_cobranca.associate = function(models) {
     historico_cobranca.belongsTo(models.usu_vinculo, {as: 'hist_usu_vin_id', foreignKey: 'vin_id'})
   };
